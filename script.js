@@ -1,8 +1,6 @@
-const items = document.querySelectorAll('.item');
+const form = document.getElementById('contactForm');
 
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    items.forEach(i => i.style.border = 'none');
-    item.style.border = '2px solid #5aa0ff';
-  });
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Повідомлення надіслано!');
 });
